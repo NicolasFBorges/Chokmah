@@ -32,5 +32,10 @@ const loop = setInterval(() => {
 }, 10)
 
 document.addEventListener('keydown', jump);
+document.addEventListener('touchstart', jump);
 
-document.addEventListener("touchstart", jump);
+function jump(event) {
+  if (event.code === 'Space' || event.type === 'touchstart') {
+    // código para pular aqui
+  }
+}
