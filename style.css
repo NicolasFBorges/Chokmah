@@ -1,3 +1,7 @@
+html {
+    font-family: 'Arial', sans-serif;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -14,6 +18,23 @@
     background: linear-gradient(#87CEEB, #E0F6FF);
 }
 
+.clouds {
+    position: absolute;
+    width: 550px;
+    animation: clouds-animation 16s infinite linear;
+}
+
+.mario {
+    width: 150px;
+    position: absolute;
+    bottom: 0;
+    transition: bottom 100ms;
+}
+
+.jump {
+    animation: jump 500ms ease-out;
+}
+
 .pipe {
     position: absolute;
     bottom: 0;
@@ -21,20 +42,38 @@
     animation: pipe-animation 1.5s infinite linear;
 }
 
-    .mario {
-        width: 150px;
-        position: absolute;
-        bottom: 0;
+.pipe-animation {
+    animation: pipe-animation 1.5s infinite linear;
+}
+
+.score-board, .highscore-board {
+    font-size: 24px;
+    color: #000;
+}
+
+.score-board {
+    position: absolute;
+    top: 10px;
+    left: 10px;    
     }
 
-    .jump {
-        animation: jump 500ms ease-out;
+.highscore-board {
+    position: absolute;
+    top: 10px;
+    right: 10px;;
     }
-
-    .clouds {
+    
+.retry-button {
         position: absolute;
-        width: 550px;
-        animation: clouds-animation 16s infinite linear;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 24px;
+        background-color: #87CEEB;
+        border: 2px solid #000;
+        border-radius: 5px;
+        padding: 10px;
+        cursor: pointer;
     }
 
 @keyframes pipe-animation {
