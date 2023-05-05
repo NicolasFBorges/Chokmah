@@ -75,4 +75,5 @@ const loop = () => {
 };
 
 document.addEventListener('keydown', jump);
+document.addEventListener('touchstart', jump);
 requestAnimationFrame(loop);
